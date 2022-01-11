@@ -10,7 +10,28 @@ module('Integration | Component | rental', function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<Rental />`);
+    // await render(hbs`<Rental />`);
+
+    this.setProperties({
+      rental: {
+        title: 'Grand Old Mansion',
+        owner: 'Veruca Salt',
+        city: 'San Francisco',
+        location: {
+          lat: 37.7749,
+          lng: -122.4194,
+        },
+        category: 'Estate',
+        type: 'Standalone',
+        bedrooms: 15,
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
+        description:
+          'This grand old mansion sits on over 100 acres of rolling hills and dense redwood forests.',
+      },
+    });
+
+    await render(hbs`<Rental @rental={{this.rental}} />`);
 
     assert.dom('article').hasClass('rental');
     assert.dom('article h3').hasText('Grand Old Mansion');
@@ -19,5 +40,6 @@ module('Integration | Component | rental', function (hooks) {
     assert.dom('article .detail.location').includesText('San Francisco');
     assert.dom('article .detail.bedrooms').includesText('15');
     assert.dom('article .image').exists();
+    assert.dom('article .map').exists();
   });
 });
