@@ -7,7 +7,6 @@ import ENV from 'super-rentals/config/environment';
 module('Integration | Component | map', function (hooks) {
   setupRenderingTest(hooks);
 
-
   test('it renders a map image for the specified parameters', async function (assert) {
     await render(hbs`<Map
       @lat="37.7797"
@@ -17,12 +16,12 @@ module('Integration | Component | map', function (hooks) {
       @height="120"
     />`);
     assert
-    .dom('.map img')
-    .exists()
-    .hasAttribute('alt', 'Map image at coordinates 37.7797,-122.4184')
-    .hasAttribute('src')
-    .hasAttribute('width', '150')
-    .hasAttribute('height', '120');
+      .dom('.map img')
+      .exists()
+      .hasAttribute('alt', 'Map image at coordinates 37.7797,-122.4184')
+      .hasAttribute('src')
+      .hasAttribute('width', '150')
+      .hasAttribute('height', '120');
 
     let { src } = find('.map img');
     let token = encodeURIComponent(ENV.MAPBOX_ACCESS_TOKEN);
