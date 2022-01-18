@@ -14,10 +14,8 @@ module('Integration | Component | rental/image', function (hooks) {
       />
     `);
 
-    // assert.dom(this.element).hasText('template block text');
     assert
-      .dom('.image img')
-      .exists()
+      .dom('.image img').exists()
       .hasAttribute('src', '/assets/images/teaching-tomster.png')
       .hasAttribute('alt', 'Teaching Tomster');
   });
