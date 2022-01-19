@@ -7,11 +7,9 @@ module('Integration | Component | rental', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
     this.setProperties({
       rental: {
+        id: 'grand-old-mansion',
         title: 'Grand Old Mansion',
         owner: 'Veruca Salt',
         city: 'San Francisco',
@@ -37,6 +35,9 @@ module('Integration | Component | rental', function (hooks) {
     assert.dom('article .detail.type').includesText('Standalone');
     assert.dom('article .detail.location').includesText('San Francisco');
     assert.dom('article .detail.bedrooms').includesText('15');
+    assert
+      .dom('article h3 a')
+      .hasAttribute('href', '/rentals/grand-old-mansion');
     assert.dom('article .image').exists();
     assert.dom('article .map').exists();
   });

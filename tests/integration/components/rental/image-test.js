@@ -14,7 +14,6 @@ module('Integration | Component | rental/image', function (hooks) {
       />
     `);
 
-    // assert.dom(this.element).hasText('template block text');
     assert
       .dom('.image img')
       .exists()
