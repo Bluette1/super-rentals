@@ -87,9 +87,9 @@ module('Acceptance | super rentals', function (hooks) {
     let button = find('.share.button');
 
     let tweetURL = new URL(button.href);
-    assert.equal(tweetURL.host, 'twitter.com');
+    assert.strictEqual(tweetURL.host, 'twitter.com');
 
-    assert.equal(
+    assert.strictEqual(
       tweetURL.searchParams.get('url'),
       `${window.location.origin}/rentals/grand-old-mansion`
     );
