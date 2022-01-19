@@ -1,7 +1,9 @@
 # super-rentals
+This is an accomodation search site built using Ember.js according to the [tutorial](https://guides.emberjs.com/release/tutorial/part-2/recap/#).
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## Deployed site
+[super-rentals site on Netlfy](super-rentals-site.netlify.app/)
+
 
 ## Prerequisites
 
