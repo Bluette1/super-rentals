@@ -47,7 +47,7 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+- You can deploy site according to [instructions on Netlify](https://www.netlify.com/blog/2015/11/24/a-step-by-step-guide-ember-on-netlify/).
 
 ## Further Reading / Useful Links
 
