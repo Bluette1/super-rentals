@@ -2,7 +2,7 @@
 This is an accomodation search site built using Ember.js according to the [tutorial](https://guides.emberjs.com/release/tutorial/part-2/recap/#).
 
 ## Deployed site
-[super-rentals site on Netlfy](super-rentals-site.netlify.app/)
+[super-rentals site on Netlfy](https://super-rentals-site.netlify.app/)
 
 
 ## Prerequisites
